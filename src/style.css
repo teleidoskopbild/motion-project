@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Comico";
+  src: url("/fonts/Comico-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Zodiak";
+  src: url("/fonts/Zodiak-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-comico: Comico;
+  --font-zodiak: Zodiak;
+}
