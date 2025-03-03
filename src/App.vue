@@ -121,6 +121,7 @@ import { ref, onMounted } from "vue";
 const counter = ref(0);
 let scrollCount = 0;
 const isHovered = ref(false);
+const touchStartY = ref(0);
 
 const handleScroll = (event) => {
   scrollCount++;
@@ -135,8 +136,26 @@ const handleScroll = (event) => {
   }
 };
 
+const handleTouchStart = (event) => {
+  touchStartY.value = event.touches[0].clientY;
+};
+
+const handleTouchMove = (event) => {
+  const touchEndY = event.touches[0].clientY;
+  const deltaY = touchStartY.value - touchEndY;
+
+  if (Math.abs(deltaY) > 30) {
+    if (deltaY > 0) {
+      counter.value = Math.min(counter.value + 1, 5);
+    } else {
+      counter.value = Math.max(counter.value - 1, 0);
+    }
+  }
+};
 onMounted(() => {
   window.addEventListener("wheel", handleScroll);
+  window.addEventListener("touchstart", handleTouchStart);
+  window.addEventListener("touchmove", handleTouchMove);
 });
 </script>
 <style scoped></style>
