@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-3 grid-rows-3 gap-2 sm:gap-4 h-screen bg-[url('canvas.jpg')] bg-cover bg-center"
+    class="grid grid-cols-3 grid-rows-3 gap-2 sm:gap-4 h-screen bg-[url('/canvas.jpg')] bg-cover bg-center"
   >
     <div
       class="font-comico absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 font-bold text-black z-1 transition-all duration-500 ease-in-out"
@@ -32,7 +32,7 @@
     </div>
 
     <div
-      class="flex flex-col justify-center bg-[url('section5.jpg')] bg-cover bg-center row-span-2 transition-all duration-1500 ease-out"
+      class="flex flex-col justify-center bg-[url('/section5.jpg')] bg-cover bg-center row-span-2 transition-all duration-1500 ease-out"
       :class="{
         'opacity-100 translate-y-0': counter >= 5,
         'opacity-0 -translate-y-200': counter < 5,
@@ -52,7 +52,7 @@
       </div>
     </div>
     <div
-      class="flex flex-col justify-center bg-[url('section2.jpg')] bg-cover bg-center col-span-2 transition-all duration-1500 ease-in-out"
+      class="flex flex-col justify-center bg-[url('/section2.jpg')] bg-cover bg-center col-span-2 transition-all duration-1500 ease-in-out"
       :class="{
         'opacity-100 translate-y-0': counter >= 4,
         'opacity-0 -translate-y-200': counter < 4,
@@ -70,14 +70,14 @@
       </div>
     </div>
     <div
-      class="bg-[url('section3.jpg')] bg-cover bg-center col-span-1 row-span-1 transition-all duration-1500 ease-out"
+      class="bg-[url('/section3.jpg')] bg-cover bg-center col-span-1 row-span-1 transition-all duration-1500 ease-out"
       :class="{
         'opacity-100 translate-y-0': counter >= 3,
         'opacity-0 -translate-y-200': counter < 3,
       }"
     ></div>
     <div
-      class="flex flex-col justify-center bg-[url('section1.jpg')] bg-cover bg-center row-span-2 transition-all duration-1500 ease-out"
+      class="flex flex-col justify-center bg-[url('/section1.jpg')] bg-cover bg-center row-span-2 transition-all duration-1500 ease-out"
       :class="{
         'opacity-100 translate-y-0': counter >= 2,
         'opacity-0 -translate-y-200': counter < 2,
@@ -94,7 +94,7 @@
       </div>
     </div>
     <div
-      class="flex flex-col justify-center bg-[url('section4.jpg')] bg-cover bg-center col-span-2 transition-all duration-1500 ease-out"
+      class="flex flex-col justify-center bg-[url('/section4.jpg')] bg-cover bg-center col-span-2 transition-all duration-1500 ease-out"
       :class="{
         'opacity-100 translate-y-0': counter >= 1,
         'opacity-0 -translate-y-200': counter < 1,
